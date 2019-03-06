@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     var posts = NSMutableArray()
     var currentUser = Auth.auth().currentUser?.uid
     
+    @IBOutlet weak var buttonB: UIButton!
+    @IBOutlet weak var buttonA: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
@@ -36,6 +38,11 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationItem.backBarButtonItem?.title = "Back"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        self.buttonA.layer.cornerRadius = 5
+        self.buttonA.alpha = 0.70
+        self.buttonB.layer.cornerRadius = 5
+        self.buttonB.alpha = 0.70
     }
     
     override func viewDidAppear(_ animated: Bool) {
